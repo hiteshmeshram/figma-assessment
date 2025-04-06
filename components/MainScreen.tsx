@@ -11,7 +11,7 @@ const profiles = [
       name: "Jonny Rose",
       position: "Sr. Software Engineering at Google",
       bio: "PM @Bytespectrum || xCloud @Google || xML summer @Amazon || DSA || Team Development || Growth Management || Full Stack Developer(MERN) || Full Stack Developer(MERN)|| Growth Management || Growth Management || Full Stack Developer",
-      imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQR9H4ynxXyiE0QrkNzHEwdNW5fvLJUypFsew&s" // Replace with actual image URL if available
+      imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQo6LJ6NpMvz2PtYc5F7EGD-tcI9S59VHizXQ&s" // Replace with actual image URL if available
     },
     {
       name: "Dev Jain",
@@ -49,6 +49,7 @@ const profiles = [
   ]
 
   const roles = ["SE/SDE", "D/AI/Ml", "Product Management", "Project Management", "Consulting", "Quantitative Finance"]
+
   const suggestions = ["Google", "Amazon" ,"Microsofy", " Slack"]
 export const MainScreen = () => {
     const [search ,setSearch] = useState<string | null>(null)
@@ -87,8 +88,8 @@ export const MainScreen = () => {
                 <div onClick={()=>router.push('/profile')} 
                     key={index} 
                     className="flex gap-5 border border-neutral-200 p-6  rounded-2xl">
-                    <div className="min-w-60 bg-red-100 " >
-                        <img className="w-full border rounded-2xl border-neutral-200 " src={profile.imageUrl}/>
+                    <div className="min-w-60 " >
+                        <img className="w-full h-full aspect-square border rounded-2xl border-neutral-200 " src={profile.imageUrl}/>
                     </div>
                     <div className="flex flex-col gap-4 w-full p-2">
                         <div className="flex justify-between">

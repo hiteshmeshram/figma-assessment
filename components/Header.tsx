@@ -1,10 +1,13 @@
-import { AlertCircleIcon } from "lucide-react"
+import { AlertCircleIcon, BellMinus, User } from "lucide-react"
 
 export const Header = () => {
-    return <div className="w-full p-5 flex justify-end">
+    return <div className="w-full p-5 flex justify-end border-b border-neutral-300">
         <div className="flex items-center gap-3">
-            <AlertCircleIcon className="border border-neutral-200 p-2 w-10 h-10 rounded-md "/>
-            <button className="border border-neutral-200 px-4 py-2">jimmy</button>
+            <BellMinus className="border border-neutral-200  p-1 shadow-xl rounded-md" size={'30'} />
+            {/* <button className="border border-neutral-200 px-4 py-2">jimmy</button> */}
+            <select className="border border-neutral-200 px-4 py-1 rounded-md shadow-xl">
+                <option className="border border-neutral-200"><User className="w-10"/>Jimmy</option>
+            </select>
         </div>        
     </div>
 }
