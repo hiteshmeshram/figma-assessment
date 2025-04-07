@@ -48,7 +48,7 @@ const profiles = [
     }
   ]
 
-  const roles = ["SE/SDE", "D/AI/Ml", "Product Management", "Project Management", "Consulting", "Quantitative Finance"]
+//   const roles = ["SE/SDE", "D/AI/Ml", "Product Management", "Project Management", "Consulting", "Quantitative Finance"]
 
   const suggestions = ["Google", "Amazon" ,"Microsofy", " Slack"]
 export const MainScreen = () => {
@@ -62,7 +62,7 @@ export const MainScreen = () => {
             <div className="grid grid-cols-2 w-full px-6 gap-20 my-2">
                 <div className="mr-10 w-full">
                     <input 
-                        onChange={(e) => {()=>setSearch(e.target.value)}}
+                        onChange={(e) => {setSearch(e.target.value)}}
                         className="relative py-2 px-6  rounded-md  bg-gray-100 w-full " placeholder="Search by name"></input>
                     {search && <div className=" h-40 bg-white absolute border border-neutral-200 rounded-md mt-4 w-[500px] p-4">
                         <h1>Trending searches</h1>

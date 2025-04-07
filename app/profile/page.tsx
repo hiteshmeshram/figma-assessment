@@ -76,7 +76,7 @@ const profiles = [
         }
     ]
     
-export default function profile() {
+export default function Profile() {
     const [selected,setSelected] = useState<number>(0)
     return <div className="flex">
         <Sidebar/>

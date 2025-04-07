@@ -26,7 +26,7 @@ export const ServiceCard = ({title, subtitle, serviceType, duration, amount}: Se
                             <ol  className="bg-blue-50 p-4 rounded-md mt-2">
                                 <li >i can help you figure out your next steps.</li>
                                 <li>I can guid you through career transition and help you explore new fields.</li>
-                                <li>Need advice on software engineerging roles? I'll help you navigate your options</li>
+                                <li>Need advice on software engineerging roles? I will help you navigate your options</li>
                             </ol>
                         </div>
                         <div className="grid grid-cols-3 gap-2 " >
