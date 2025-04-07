@@ -11,25 +11,25 @@ const profiles = [
       name: "Jonny Rose",
       position: "Sr. Software Engineering at Google",
       bio: "PM @Bytespectrum || xCloud @Google || xML summer @Amazon || DSA || Team Development || Growth Management || Full Stack Developer(MERN) || Full Stack Developer(MERN)|| Growth Management || Growth Management || Full Stack Developer",
-      imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQo6LJ6NpMvz2PtYc5F7EGD-tcI9S59VHizXQ&s" // Replace with actual image URL if available
+      imageUrl: "https://www.w3schools.com/howto/img_avatar2.png" // Replace with actual image URL if available
     },
     {
       name: "Dev Jain",
       position: "Sr. Software Engineering at Microsoft",
       bio: "PM @Bytespectrum || xCloud @Google || xML summer @Amazon || DSA || Team Development || Growth Management || Full Stack Developer(MERN)",
-      imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQo6LJ6NpMvz2PtYc5F7EGD-tcI9S59VHizXQ&s"
+      imageUrl: "https://www.w3schools.com/howto/img_avatar2.png"
     },
     {
       name: "Rishi Mehta",
       position: "Sr. Software Engineering at JP Morgan",
       bio: "Prev Application Engineer @Google",
-      imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQo6LJ6NpMvz2PtYc5F7EGD-tcI9S59VHizXQ&s"
+      imageUrl: "https://www.w3schools.com/howto/img_avatar2.png"
     },
     {
       name: "Heet Mistry",
       position: "Sr. Software Engineering at Zomato",
       bio: "PM @Bytespectrum || xCloud @Google || xML summer @Amazon || DSA || Team Development",
-      imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQo6LJ6NpMvz2PtYc5F7EGD-tcI9S59VHizXQ&s"
+      imageUrl: "https://www.w3schools.com/howto/img_avatar2.png"
     }
   ];
 
@@ -70,26 +70,27 @@ export const MainScreen = () => {
                     </div>}
                 </div>
                 <div className="flex gap-5 w-full justify-between">
-                    {selectBoxes.map((s) => (
-                        <>
-                            <select className="relative border border-neutral-300 px-4 py-2 rounded-md text-md ">
-                                <option className="relative ">{s.name}</option>
+                    {selectBoxes.map((s,index) => (
+                        <div key={index}>
+                            <select  className="relative border border-neutral-300 px-4 py-2 rounded-md text-md ">
+                                <option value={s.name} className="relative ">{s.name}</option>
                             </select>
                             {/* <div className="absolute w-40 h-60 border border-neutral-200 bg-white mt-12  p-4">
                                 <ul>
                                 {roles.map((r)=> <li>{r}</li>)}
                                 </ul>
                             </div> */}
-                        </>
+                        </div>
                     ))}
                 </div>
             </div>
             {profiles.map((profile,index) => (
                 <div onClick={()=>router.push('/profile')} 
                     key={index} 
-                    className="flex gap-5 border border-neutral-200 p-6  rounded-2xl">
+                    className="flex  border border-neutral-200 p-6  rounded-2xl">
                     <div className="min-w-60 " >
-                        <img className="w-full h-full aspect-square border rounded-2xl border-neutral-200 " src={profile.imageUrl}/>
+                        <img className="w-48 h-48 aspect-square border rounded-2xl border-neutral-200 " src={profile.imageUrl}/>
+                      
                     </div>
                     <div className="flex flex-col gap-4 w-full p-2">
                         <div className="flex justify-between">

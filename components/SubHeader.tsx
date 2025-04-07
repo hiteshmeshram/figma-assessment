@@ -1,4 +1,3 @@
-import { ToggleLeftIcon } from "lucide-react"
 
 export const SubHeader = () => {
     return <div className="w-full bg-blue-100 h-20 px-34 items-center flex justify-between">

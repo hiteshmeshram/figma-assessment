@@ -15,7 +15,7 @@ const timeSlots = [
   
 export const TimeComponent = () => {
     const [date, setDate] = useState<Date | undefined>(new Date())
-    const [selectedTime,setSelectedTime] = useState<any>()
+    const [selectedTime,setSelectedTime] = useState<string>()
 
     return <div className="mt-5 p-5 flex grid grid-cols-2">
             {/* <div className="flex gap-2"><Calendar className="w-5 h-5"/>Date</div> */}

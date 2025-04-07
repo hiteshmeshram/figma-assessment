@@ -12,14 +12,13 @@ const profiles = [
       name: "Jonny Rose",
       position: "Sr. Software Engineering at Google",
       bio: "PM @Bytespectrum || xCloud @Google || xML summer @Amazon || DSA || Team Development || Growth Management || Full Stack Developer(MERN) || Full Stack Developer(MERN)|| Growth Management || Growth Management || Full Stack Developer",
-      imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQR9H4ynxXyiE0QrkNzHEwdNW5fvLJUypFsew&s" // Replace with actual image URL if available
+      imageUrl: "https://www.w3schools.com/howto/img_avatar2.png" // Replace with actual image URL if available
     }]
 
     type buttons = {
         name: string,
         content: React.ReactNode
     }
-    const button = ["All", "1:1 call", "Priority DM", "Package", "Webinar","Digital Product"]
     const buttons = [
         {
             name: "All",
@@ -77,7 +76,7 @@ const profiles = [
         }
     ]
     
-export default function() {
+export default function profile() {
     const [selected,setSelected] = useState<number>(0)
     return <div className="flex">
         <Sidebar/>
@@ -89,6 +88,7 @@ export default function() {
                             className="flex gap-5 p-6  rounded-2xl">
                             <div className="min-w-60 bg-red-100 " >
                                 <img className="w-full border rounded-2xl border-neutral-200 " src={profiles[0].imageUrl}/>
+                               
                             </div>
                             <div className="flex flex-col gap-4 w-full p-2">
                                 <div className="flex justify-between">
@@ -125,13 +125,14 @@ export default function() {
             <div className="bg-slate-200 rounded-md ">
                 {buttons.map((b,index)=> (
                     <button 
+                        key={index}
                         onClick={()=>setSelected(index)}
                         className={`rounded-xl px-5 py-1 text-sm m-2 ${selected === index ? "bg-white" : "bg-gray-200"}`}>{b.name}</button>
                 ))}
             </div>
             <div>
                 {buttons.map((button,index) => (
-                    <div>
+                    <div key={index}>
                         {selected === index  ? button.content: ""}
                     </div>
                 ))}
